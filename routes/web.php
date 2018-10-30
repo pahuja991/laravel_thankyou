@@ -20,6 +20,10 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('pages.contact');
 });
-Route::get('/contact', function () {
-    return view('welcome');
+
+Route::post('/contact', function () {
+
+   echo 'Hello buddy';
+
 });
+
