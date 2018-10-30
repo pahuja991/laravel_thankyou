@@ -3,21 +3,28 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 class PaperController extends Controller
 {
-    function index() {
+    function index()
+    {
         return view('pages.index');
     }
-    function about() {
+
+    function about()
+    {
         return view('pages.about');
     }
-    function contact() {
+
+    function contact()
+    {
         return view('pages.contact');
     }
+
     function store(Request $request)
     {
-        $name =$request->name;
-        return redirect()->route('thanks',['name' => $name]);
+        $name = $request->name;
+        return redirect()->route('thanks', ['name' => $name]);
     }
-    function thanks($name,Request $request)
+
+    function thanks($name, Request $request)
     {
         return view('pages.thankyou')->with(compact('name'));
     }
