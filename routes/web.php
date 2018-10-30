@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,24 +9,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('pages.index');
-});
-Route::get('/about', function () {
-    return view('pages.about');
-});
-Route::get('/contact', function () {
-    return view('pages.contact');
-});
-
-Route::post('/contact', function () {
-
-   $data = request()->all();
-   echo "Email: " . $data['email'] . '<br>';
-   echo "Body: " . $data['body'];
-
-});
-
-Route::get('/Thankyou/{name}','PagesController@thankyou')->name('Thankyou');
-
+Route::get('/', 'PaperController@index')->name('index');
+Route::get('/about', 'PaperController@about')->name('about');
+Route::get('/contact', 'PaperController@contact')->name('contact');
+Route::post('/contact', 'PaperController@store')->name('contact.store');
+Route::get('/thanks/{name}', 'PaperController@thanks')->name('thanks');
