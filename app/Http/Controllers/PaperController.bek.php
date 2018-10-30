@@ -6,13 +6,18 @@ use Illuminate\Http\Request;
 
 class PaperController extends Controller
 {
-    function index() {
+    function index()
+    {
         return view('pages.index');
     }
-    function about() {
+
+    function about()
+    {
         return view('pages.about');
     }
-    function contact() {
+
+    function contact()
+    {
         return view('pages.contact');
     }
 
