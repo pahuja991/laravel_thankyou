@@ -29,3 +29,5 @@ Route::post('/contact', function () {
 
 });
 
+Route::get('/Thankyou/{name}','PagesController@thankyou')->name('Thankyou');
+

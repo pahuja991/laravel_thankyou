@@ -1,13 +1,8 @@
 @extends('layouts.default')
-
 @section('content')
     <div class="jumbotron">
         <div class="container">
-
-            <h1>Welcome to About Page</h1>
+            <h1>ThankYou! {{$name}}</h1>
         </div>
     </div>
-
 @endsection
-
-
